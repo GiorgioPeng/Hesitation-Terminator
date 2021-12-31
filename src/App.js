@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { GlobalStateProvider } from "./globalState";
+import Box from './components/Box'
+import Switch from './components/Switch'
+import Adder from './components/Adder'
+import Backer from './components/Backer'
+import FactorSet from './components/FactorSet'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalStateProvider>
+      <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'center' }}>
+        <Adder />
+        <Backer />
+        <FactorSet />
+      </div>
+      <Switch />
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Box />
+      </div>
+    </GlobalStateProvider >
   );
 }
 
