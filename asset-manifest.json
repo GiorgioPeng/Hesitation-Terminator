@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Hesitation-Terminator/static/css/main.45095566.css",
+    "main.js": "/Hesitation-Terminator/static/js/main.23966499.js",
+    "static/js/787.d8743f87.chunk.js": "/Hesitation-Terminator/static/js/787.d8743f87.chunk.js",
+    "static/media/logo.svg": "/Hesitation-Terminator/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Hesitation-Terminator/index.html",
+    "main.45095566.css.map": "/Hesitation-Terminator/static/css/main.45095566.css.map",
+    "main.23966499.js.map": "/Hesitation-Terminator/static/js/main.23966499.js.map",
+    "787.d8743f87.chunk.js.map": "/Hesitation-Terminator/static/js/787.d8743f87.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45095566.css",
+    "static/js/main.23966499.js"
+  ]
+}
