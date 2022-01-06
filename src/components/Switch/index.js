@@ -8,8 +8,8 @@ import { useGlobalState } from '../../globalState'
 
 export default function CustomizedSwitches() {
     const [state, updateState] = useGlobalState()
-    const modifyModel = (event)=>{
-        return updateState('model',event.target.checked)
+    const modifyModel = (event) => {
+        return updateState('model', event.target.checked)
         // console.log(event.target.checked)
     }
     const IOSSwitch = styled((props) => (
@@ -70,7 +70,7 @@ export default function CustomizedSwitches() {
                 right: 0,
                 top: 0
             }}
-            control={<IOSSwitch sx={{ m: 1 }}  />}
+            control={<IOSSwitch disabled sx={{ m: 1 }} />}
             label="专业模式"
         />
     );
