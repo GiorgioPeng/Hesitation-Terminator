@@ -7,6 +7,8 @@ const initState = {
     options: [],
     removed: [],
     factors: [],
+    scores: [],
+    bestIndex: -1,
 };
 export function GlobalStateProvider({ children }) {
     const [state, setState] = useState(initState);

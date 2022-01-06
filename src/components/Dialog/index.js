@@ -7,8 +7,9 @@ import { useGlobalState } from '../../globalState'
 import cyan from '@material-ui/core/colors/cyan';
 import Ranker from '../Ranker'
 export default function SimplePaper(props) {
-    const { index } = props
+    const { index, isBest } = props
     const [state, updateState] = useGlobalState()
+    const [oneScores, setOneScores] = React.useState([])
     const cancel = () => {
         let tempOptions = state.options
         let indexOfindex = tempOptions.indexOf(index)
@@ -27,7 +28,11 @@ export default function SimplePaper(props) {
                 flexDirection: 'column',
                 justifyContent: 'space-around',
                 alignContent: 'center',
-                backgroundColor: cyan[Object.keys(cyan)[ index % Object.keys(cyan).length]]
+                transition: '1s all linear',
+                backgroundColor: cyan[Object.keys(cyan)[index % Object.keys(cyan).length]],
+                border: isBest ? '10px solid gold' : '',
+                transform: isBest ? 'scale(1.5)' : '',
+                zIndex: isBest ? '998' : '0',
             }}>
             <IconButton
                 aria-label="close"
@@ -39,13 +44,10 @@ export default function SimplePaper(props) {
                 <CancelPresentationIcon fontSize="inherit" />
             </IconButton>
 
-            <TextField label={"备选项" + index} style={{marginTop:'20px'}} />
-            <Ranker />
-            <Ranker />
-            <Ranker />
-            <Ranker />
-            <Ranker />
-            <Ranker />
+            <TextField label={"备选项" + index} style={{ marginTop: '20px' }} />
+            {state.factors.map((val, i) =>
+                <Ranker name={val} key={i} ind={i} belong={index} oneScores={oneScores} setOneScores={setOneScores} />
+            )}
         </Paper>
     );
 }

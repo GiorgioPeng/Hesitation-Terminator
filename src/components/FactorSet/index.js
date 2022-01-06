@@ -7,13 +7,8 @@ import { useGlobalState } from '../../globalState'
 
 export default function Adder() {
     const [state, updateState] = useGlobalState()
-    const [counter, setCounter] = React.useState(0)
-    const addFactor = (event) => {
-        // let tempOptions = state.options
-        // tempOptions.push(counter)
-        // setCounter(counter+1)
-        // updateState('options', tempOptions)
-        console.log(event.target.value)
+    const modifyFactor = (value) => {
+        updateState('factors', value)
     }
     return (
         <Autocomplete
@@ -22,17 +17,19 @@ export default function Adder() {
             options={[]}
             id="tags-filled"
             freeSolo
-            onClose={addFactor}
-            renderTags={(value, getTagProps) =>
-                value.map((option, index) => (
+            value={state.factors}
+            onChange={(event, value) => modifyFactor(value)}
+            renderTags={(value, getTagProps) => {
+                return value.map((option, index) => (
                     <Chip variant="outlined" label={option} {...getTagProps({ index })} />
                 ))
+            }
             }
             renderInput={(params) => (
                 <TextField
                     {...params}
                     variant="filled"
-                    label="添加因素"
+                    label="添加能够辅助决策的方面/因素"
                     placeholder="因素"
                 />
             )}

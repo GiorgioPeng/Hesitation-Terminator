@@ -6,6 +6,7 @@ import Switch from './components/Switch'
 import Adder from './components/Adder'
 import Backer from './components/Backer'
 import FactorSet from './components/FactorSet'
+import ResultGetter from './components/ResultGetter'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Box />
       </div>
+      <ResultGetter />
     </GlobalStateProvider >
   );
 }

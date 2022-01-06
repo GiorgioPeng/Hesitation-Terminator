@@ -5,6 +5,10 @@ import { useGlobalState } from '../../globalState'
 export default function SimplePaper() {
     const [state, updateState] = useGlobalState()
 
+    React.useEffect(()=>{
+        console.log('from box')
+        console.log(state.bestIndex)
+    },[state.bestIndex])
     return (
         <Box
             sx={{
@@ -19,7 +23,8 @@ export default function SimplePaper() {
             }}
         >
             {state.options.map((e) => {
-                return <Dialog key={e} index={e} />
+                console.log(e)
+                return <Dialog key={e} index={e} isBest={e===state.bestIndex} />
             })}
         </Box>
     );

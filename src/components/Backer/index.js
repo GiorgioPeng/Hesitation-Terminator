@@ -1,7 +1,9 @@
 import * as React from 'react';
 import SettingsBackupRestoreIcon from '@material-ui/icons/SettingsBackupRestore';
 import IconButton from '@material-ui/core/IconButton';
-import { useGlobalState } from '../../globalState'
+import { useGlobalState } from '../../globalState';
+import Tooltip from '@material-ui/core/Tooltip';
+
 
 export default function Adder() {
     const [state, updateState] = useGlobalState()
@@ -18,8 +20,10 @@ export default function Adder() {
         updateState('removed', tempRemoved)
     }
     return (
+        <Tooltip title="撤销上一次的选项删除" placement="top">
         <IconButton aria-label="backer" color="primary" size='large' onClick={backer}>
             <SettingsBackupRestoreIcon fontSize="inherit" />
         </IconButton>
+        </Tooltip>
     );
 }

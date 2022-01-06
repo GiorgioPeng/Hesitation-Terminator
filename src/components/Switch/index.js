@@ -66,7 +66,7 @@ export default function CustomizedSwitches() {
     return (
         <FormControlLabel
             style={{
-                position: 'fixed',
+                position: 'absolute',
                 right: 0,
                 top: 0
             }}
