@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# 犹豫终结者
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+:trollface: 犹豫终结者是一个web应用，旨在解决掉用户的选择困难症
 
-## Available Scripts
+## 原理
+1. 使用用户的先验数据，量化以便衡量每个因素的重要性
+2. 在同样得分下，相信用户最先添加进来的备选项是最优的（不然凭啥最先个添加进来）
 
-In the project directory, you can run:
+## 能够做什么
+本项目能够做**任何**决策  
 
-### `yarn start`
+小到今天有很多好吃的，要吃什么   
+> 常见因素：
+> - 好吃程度
+> - 价格理想程度
+> - 出餐用时
+> - 餐馆位置远近程度
+> - 。。。  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+大到人生重大决策，比如高考选校
+> 常见因素
+> - 能被录取的可能程度
+> - 饮食适应程度
+> - 师资
+> - 气候环境
+> - 生活幸福指数
+> - 。。。
 
-### `yarn test`
+**:trollface:做出选择后悔了概不负责啊**  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+理论上来说，当你的先验知识越加丰富，做出的选择越加接近最优解, 究其根本，该应用仅仅只是一种因素辅助量化手段。  
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 如何使用
+这里以在北交的明湖食堂吃什么为例。。。    
+<img src='./README/intro.jpg' alt='how to use'/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## TODO
+[x] 快速模式（快速的做出最优判断）  
+[ ] 专业模式（可以自定义每个因素的权重）
