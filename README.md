@@ -2,6 +2,9 @@
 
 :trollface: 犹豫终结者是一个web应用，旨在解决掉用户的选择困难症
 
+## 在线使用
+https://giorgiopeng.github.io/Hesitation-Terminator/
+
 ## 原理
 1. 使用用户的先验数据，量化以便衡量每个因素的重要性
 2. 在同样得分下，相信用户最先添加进来的备选项是最优的（不然凭啥最先添加进来）
